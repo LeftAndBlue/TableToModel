@@ -30,6 +30,7 @@ namespace SqlToModel
                 if (String.IsNullOrEmpty(strConn) || String.IsNullOrEmpty(strTableName) || String.IsNullOrEmpty(strclassName))
                 {
                     MessageBox.Show("请填写配置！");
+                    return;
                 }
                 var dicTableStruct = SqlHelper.SetSqlConnection(strConn, strTableName);
                 stringBuilder.Clear();
