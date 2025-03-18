@@ -10,7 +10,6 @@ namespace SqlToModel
         public static Dictionary<string,string> SetSqlConnection(string strConnect,string tableName)
         {
             string connectionString = strConnect;
-            //string connectionString = "Server=gs.chinesewms.com,2016;Database=shhcznbwms;User Id=sa;Password=Amt!itf123;";
             string sql = $"SELECT COLUMN_NAME, DATA_TYPE, IS_NULLABLE" +
                 $" FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '{tableName}';";
             DataTable dt =new DataTable();
