@@ -59,6 +59,11 @@ namespace SqlToModel
             //输出成cs文件
             using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
             {
+                if (String.IsNullOrEmpty(txtResult.Text))
+                {
+                    MessageBox.Show("请点击begin！");
+                    return;
+                }
                 if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
                 {
                     string path = System.IO.Path.Combine(folderBrowserDialog.SelectedPath, strclassName + ".cs");
